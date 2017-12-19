@@ -1,3 +1,5 @@
-nav.navbar-fixed-top {
+@import "_variables";
+nav.pi {
   border-top: $nav_accent_height solid $accent_color;
+  border-bottom: none;
 }

@@ -1,8 +1,7 @@
 @import "_variables";
 
-body {
-  padding-top: 70px + $nav_accent_height;
-}
-
+@import "common";
 @import "_header";
 @import "_footer";
+
+@import "_hero";

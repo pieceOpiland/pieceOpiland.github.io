@@ -2,7 +2,7 @@
 layout: post
 title: "Site Under Construction!"
 date:  2017-02-26 16:47:00 -0500
-categories: welcome status
+categories: welcome
 ---
 
 Please excuse the mess...

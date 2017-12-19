@@ -1,0 +1,26 @@
+@import "_mixins.scss";
+
+section.hero {
+  $hero_image_height: 500px;
+  $hero_header_font_color: #FEFEFE;
+  $hero_bottom_margin: 64px;
+
+  height: $hero_image_height;
+  margin: -$body_margin 0 $hero_bottom_margin;
+  text-align: center;
+  background: fixed center #121212;
+  background-size: cover;
+
+  @include display-flex();
+  @include flex-column();
+  @include align-items(middle);
+  @include justify-content(center);
+
+  h1 {
+    color: $hero_header_font_color;
+  }
+
+  h2 {
+    color: darken($hero_header_font_color, 20%)
+  }
+}
