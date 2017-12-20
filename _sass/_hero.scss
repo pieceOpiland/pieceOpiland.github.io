@@ -1,20 +1,42 @@
 @import "_mixins.scss";
+@import "variables";
 
 section.hero {
   $hero_image_height: 500px;
   $hero_header_font_color: #FEFEFE;
-  $hero_bottom_margin: 64px;
+  $hero_bottom_margin: 32px;
 
   height: $hero_image_height;
   margin: -$body_margin 0 $hero_bottom_margin;
-  text-align: center;
-  background: fixed center #121212;
-  background-size: cover;
 
-  @include display-flex();
-  @include flex-column();
-  @include align-items(middle);
-  @include justify-content(center);
+  position: relative;
+  background: #121212;
+  overflow: hidden;
+
+  div.image {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    //background-size: cover;
+    background-position-x: center;
+  }
+
+  .header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+
+    @include display-flex();
+    @include flex-column();
+    @include align-items(middle);
+    @include justify-content(center);
+  }
 
   h1 {
     color: $hero_header_font_color;

@@ -2,7 +2,7 @@
 layout: post
 title:  "Construction Update!"
 subtitle: "It's still underway!"
-hero_image: /assets/cactus_bg.png
+hero_image: /assets/img/cactus_bg.png
 categories: status
 ---
 
