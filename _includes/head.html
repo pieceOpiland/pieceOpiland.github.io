@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="zOtoJZ_htdP8xuf484HAtm4InPC4WIn6JdHgcpy_Djs" />
-<meta name="description" content="Nolan Piland's personal site. Here lies my general activities and thoughts (when I have the time)." />
+<meta name="description" content="{% if page.excerpt %}{{page.excerpt | strip | strip_html }}{% else %}{{site.description | strip}}{% endif %}" />
 
 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
