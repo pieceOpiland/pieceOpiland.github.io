@@ -24,8 +24,9 @@ github_username:  pieceOpiland
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
