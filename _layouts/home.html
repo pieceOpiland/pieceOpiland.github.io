@@ -1,20 +1,44 @@
----
-layout: default
----
-<div class="container">
-    {% for post in site.posts %}
-    <div class="col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">{{ post.title }}</h2>
-            </div>
-            <div class="panel-body">
-                {{ post.excerpt | strip_html }}
-            </div>
-            <div class="panel-footer">
-                <a href="{{ post.url }}">More...</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+{% include header.html %}
+<main>
+    <div class="container">
+        <h1>Posts</h1>
+        {% for post in site.posts %}
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">{{ post.title }}</h2>
+                </div>
+                <div class="panel-body">
+                    {{ post.excerpt | strip_html }}
+                </div>
+                <div class="panel-footer">
+                    <a href="{{ post.url }}">More...</a>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+</main>
+{% include footer.html %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Person",
+    "url": "https://pieceopiland.github.io",
+    "image": "https://pieceopiland.github.io/assets/img/profile.png",
+    "name": "Nolan Piland",
+    "alumniOf": "North Carolina State University",
+    "gender": "male",
+    "jobTitle": "Software Developer",
+    "sameAs": ["https://www.instagram.com/piece_o_piland/?hl=en"],
+    "description": "Nolan Piland is a software developer. He's currently seeking out hobbies to keep himself busy, as well as happy!"
+}
+</script>
+</body>
+</html>
